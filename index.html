@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>sit ON chair</title>
+        <meta name="description" content="Strona robiona na pierwszych warsztatach Coder's Lab, sprawdzająca wiedzę zdobytą przez cały tydzień.">
+        <meta name="keywords" content="project, coders-lab, website, HTML5, CSS3">
+        <link href="css/reset.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </head>
+
+    <body>
+
+        <!-- ====== Navigation and Header section ======= -->
+        <header class="main-header">
+
+            <nav class="navigation-bar">
+                <a href="index.html" class="logo">sit <span>on</span> chair</a>
+                <ul class="navigation-list" id="top">
+                    <li class="parent-dropDown"><a href="#">O FIRMIE</a>
+                        <ul class="dropDown">
+                            <li><a href="#news">Aktualności</a></li>
+                            <li><a href="#team">Nasz team</a></li>
+                            <li><a href="#history">Historia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#galerry">GALERIA</a></li>
+                    <li><a href="#contact">KONTAKT</a></li>
+                </ul>
+            </nav>
+
+            <section class="jumbotron">
+                <div class="jumbotron-content clearfix">
+                    <div class="left"></div>
+                    <div class="jumbotron-image">
+                        <ul class="slider">
+                            <li><img src="images/black_chair.png"></li>
+                            <li><img src="images/red.png"></li>
+                            <li><img src="images/orange.png"></li>
+                        </ul>
+                    </div>
+                    <div class="jumbotron-text">
+                        <h1>sit <span>on</span> our <span>chair</span></h1>
+
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a,
+                        scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus
+                        pharetra nulla ac diam. Quisque semper justo at risus.</h2>
+                        <a href="#seemore" class="btn-seeMore">zobacz więcej</a>
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </section>
+
+        </header>
+
+        <!-- ====== info section under jumbotron ======= -->
+        <section class="info">
+            <div class="info-wrapper">
+
+                <a href="#chairClair">
+                    <figure>
+                        <img src="images/box1_img.jpg">
+                        <figcaption>Chair CLAIR</figcaption>
+                    </figure>
+                </a>
+                <a href="#chairMargarita">
+                    <figure>
+                        <img src="images/box2_img.jpg">
+                        <figcaption>Chair MARGARITA</figcaption>
+                    </figure>
+                </a>
+                <div class="info-box">
+                    <p>Finds all inputs</p>
+                    <p>Finds all inputs that are not checked and highlights the next sibling span. When clicking the checkboxes since no click events have been linked.</p>
+                    <p>Notice there is no change when clicking the checkboxes since no click events have been.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ====== pricelist section ======= -->
+        <section class="pricelist">
+            <div class="pricelist-wrapper">
+                <h3>cennik</h3>
+                <div class="pricelist-content">
+
+                    <div class="pricelist-label">
+                        <h4>basic plan</h4>
+                            <div class="circle">
+                                <p>85<sup>99</sup></p>
+                                <p>PLN/MSC</p>
+                            </div>
+                        <ul>
+                            <li>Zakup towaru + dowóz</li>
+                            <li>Serwis</li>
+                        </ul>
+                        <a href="#join" class="btn-join">dołącz</a>
+                    </div>
+
+                    <div class="pricelist-label">
+                        <h4>standard plan</h4>
+                            <div class="circle">
+                                <p>95<sup>99</sup></p>
+                                <p>PLN/MSC</p>
+                            </div>
+                        <ul>
+                            <li>Zakup towaru + dowóz</li>
+                            <li>Serwis</li>
+                            <li>Gwarancja 5 lat</li>
+                        </ul>
+                        <a href="#join" class="btn-join">dołącz</a>
+                    </div>
+
+                    <div class="pricelist-label">
+                        <h4>advance plan</h4>
+                            <div class="circle">
+                                <p>211<sup>00</sup></p>
+                                <p>PLN/MSC</p>
+                            </div>
+                        <ul>
+                            <li>Zakup towaru + dowóz</li>
+                            <li>Serwis</li>
+                            <li>Gwarancja 6 lat</li>
+                            <li>Porady projektanta</li>
+                        </ul>
+                        <a href="#join" class="btn-join">dołącz</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== chair order section ======= -->
+        <section class="order">
+            <div class="order-wrapper">
+
+                <div class="order-chair-prop">
+                    <h3>skomponuj swoje krzesło</h3>
+                    <label class="select">
+                        <select class="chair-type">
+                            <option value="Twój fotel" disabled selected hidden>Wybierz rodzaj</option>
+                            <option data-price="2400" value="Clair">Clair</option>
+                            <option data-price="2600" value="Margarita">Margarita</option>
+                            <option data-price="2800" value="Selena">Selena</option>
+                        </select>
+                    </label>
+                    <label class="select">
+                        <select class="chair-color">
+                            <option value="" disabled selected hidden>Wybierz kolor</option>
+                            <option data-num="1" data-price="0" value="czerwony">czerwony</option>
+                            <option data-num="2" data-price="200" value="czarny">czarny</option>
+                            <option data-num="3" data-price="400" value="pomarańczowy">pomarańczowy</option>
+                        </select>
+                    </label>
+                    <label class="select">
+                        <select class="chair-fabric">
+                            <option value="" disabled selected hidden>Wybierz materiał</option>
+                            <option data-price="0" value="tkanina">tkanina</option>
+                            <option data-price="100" value="skóra">skóra</option>
+                        </select>
+                    </label>
+                    <div class="checkbox">
+                        <input type="checkbox" id="agree-transport">
+                        <label for="agree-transport">Transport</label>
+                    </div>
+                </div>
+
+                <div class="order-chair-image">
+                    <img class="visible-image" src="images/armchair.png" height="200" width="200">
+                    <img src="images/red_chair.png" height="200" width="250">
+                    <img src="images/black_chair.png" height="200" width="250">
+                    <img src="images/orange.png" height="200" width="250">
+                </div>
+
+                <div class="order-checkout">
+                    <h3>podsumowanie</h3>
+                    <table class="order-checkout-table">
+                        <thead>
+                            <tr>
+                                <th>Twój fotel</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>SUMA</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <a href="#order" class="btn-order">zamawiam</a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ====== footer section ======= -->
+        <footer class="contact">
+            <div class="contact-wrapper">
+
+                <h3>kontakt</h3>
+
+                <!-- ====== elements on the top side (contact form, chair-image, checkbox, button ) ======= -->
+                <div class="contact-content clearfix">
+
+                    <div class="contact-content-form">
+                        <input type="text" placeholder="Imię">
+                        <input type="text" placeholder="email">
+                        <textarea rows="4" cols="50" placeholder="Wiadomość"></textarea>
+                    </div>
+
+                    <div class="contact-content-secondary">
+                        <img src="images/red_chair.png">
+                        <div class="checkbox">
+                            <input type="checkbox" id="agree-data">
+                            <label for="agree-data">Zgadzam się na przetwarzanie danych osobowych</label>
+                        </div>
+                        <!--<p class="clearfix">Zgadzam się na przetwarzanie danych osobowych</p>-->
+                        <a href="#submit" class="btn-submit">wyślij</a>
+                    </div>
+
+                </div>
+
+
+
+                <!-- ====== copyrights and social icons buttons ======= -->
+                <div class="contact-footer-bottom">
+
+                    <div class="copyright">
+                        <p>Copyright 2014 | All Rights Reserved. - Sit on Chair</p>
+                    </div>
+
+                    <div class="contact-social">
+                        <ul class="contact-social-list">
+                            <li><a href="https://www.flickr.com/" class="social-icon-fl">flickr</a></li>
+                            <li><a href="https://vimeo.com/" class="social-icon-vi">vimeo</a></li>
+                            <li><a href="https://www.pinterest.com/" class="social-icon-pi">pinterest</a></li>
+                            <li><a href="https://twitter.com/" class="social-icon-tw">twitter</a></li>
+                        </ul>
+                    </div>
+                        <a href="#top" class="logo-bottom">SIT <strong>ON </strong>CHAIR</a>
+
+
+                </div>
+
+
+            </div>
+        </footer>
+
+    </body>
+
+</html>
