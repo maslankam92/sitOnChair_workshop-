@@ -729,6 +729,7 @@ img .visible-image {
     width: 40px;
     opacity: 0;
     position: absolute;
+    background-color: red;
 }
 
 .checkbox label {

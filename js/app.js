@@ -76,28 +76,44 @@ $(function(){
         }
 
         images.eq(visibleImage).show();
-    })
+    });
 
 
 
-    // ========= Order and checkout form ========
+    // ========= Order and checkout form ======
 
 
-    //selection of chair type =====
+    /**
+     * function is triggered after each click on select button. It iterates throughout cells with price values and adds them up.
+     */
+
+    var totalPriceCell = $(".order-checkout > table > tfoot > tr > td:nth-child(2)");
+
+    function summingLastResult() {
+        var sum = 0;
+        $(".order-checkout-table .priceCell").each(function (index) {
+            if(!isNaN(parseInt($(this).text()))){
+                sum += (parseInt($(this).text()));
+                return sum
+            }
+        });
+        totalPriceCell.text(sum);
+    }
+
+    //selection button of chair type =====
 
     var chairSelect = $(".chair-type");
 
-    var chairTypeTableCell = $(".order-checkout > table > thead > tr > th:nth-child(1)");
-    var chairTypePriceTabelCell = $(".order-checkout > table > thead > tr > th:nth-child(2)");
-
     chairSelect.click(function(){
+        var chairTypeTableCell = $(".order-checkout > table > thead > tr > th:nth-child(1)");
+        var chairTypePriceTabelCell = $(".order-checkout > table > thead > tr > th:nth-child(2)");
         var chairTypeSelect = $(".chair-type option:selected");
         var chairTypeValue = chairTypeSelect.val();
         var chairTypePriceValue = chairTypeSelect.data("price");
 
         chairTypeTableCell.text(chairTypeValue);
         chairTypePriceTabelCell.text(chairTypePriceValue);
-
+        summingLastResult();
     });
 
 
@@ -117,19 +133,16 @@ $(function(){
         var chairColorPriceValue = chairColorSelect.data("price");
 
         var chairNumImage = chairColorSelect.data("num");
-        console.log(chairNumImage);
 
         if(chairNumImage !== undefined ){
             chairsImgs.hide();
             chairsImgs.eq(chairNumImage).show();
         };
 
-
-
-
-
         chairColorTableCell.text(chairColorValue);
         chairColorPriceTabelCell.text(chairColorPriceValue);
+
+        summingLastResult();
     });
 
 
@@ -145,10 +158,32 @@ $(function(){
         var chairFabricPriceValue = chairFabricSelect.data("price");
         chairFabricTableCell.text(chairFabricValue);
         chairFabricPriceTabelCell.text(chairFabricPriceValue);
+
+        summingLastResult();
     });
 
 
+    var transportSelect = $(".order-wrapper .checkbox label");
 
+    var chairTransportTableCell = $(".order-checkout > table > tbody > tr:nth-child(3) > td:nth-child(1)");
+    var chairTransportPriceTabelCell = $(".order-checkout > table > tbody > tr:nth-child(3) > td.priceCell");
+
+    transportSelect.click(function(){
+        var checked = window.getComputedStyle(
+            document.querySelector('.order-wrapper .checkbox label'), ':after'
+        ).getPropertyValue('display');
+
+        if(checked == "none") {
+            chairTransportTableCell.text("Transport");
+            chairTransportPriceTabelCell.text("100");
+        } else {
+            chairTransportTableCell.text("");
+            chairTransportPriceTabelCell.text("");
+        }
+
+        summingLastResult();
+
+    });
 
 
 
